@@ -1,0 +1,11 @@
+<ActionBar title="Optimización - Ejemplos" class="action-bar my-ActionBar"></ActionBar>
+<ListView [items]="myExamples" (itemTap)="onExampleTap($event)">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+        <StackLayout [class.even]="even" [class.odd]="odd" >
+            <DockLayout style="margin-top: 0px" stretchLastChild="true">
+            <label class="leftText" [text]="item.name"></label>
+            <label class="rightText" text="❯"></label>
+            </DockLayout>
+        </StackLayout>
+    </ng-template>
+</ListView>
